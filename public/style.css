@@ -1,0 +1,158 @@
+/* reset + base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* container */
+.container {
+  width: 90%;
+  max-width: 800px;
+  border: 1px solid #0f0;
+  padding: 20px;
+  background-color: #000;
+}
+
+/* header */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #0f0;
+  padding-bottom: 10px;
+}
+
+.chat-header h1 {
+  font-size: 1.5rem;
+  color: #0f0;
+}
+
+.status-indicator {
+  display: flex;
+  gap: 10px;
+}
+
+.status {
+  color: #f00;
+}
+
+.status.online {
+  color: #0f0;
+}
+
+.user-count {
+  color: #0f0;
+}
+
+/* messages */
+.messages-container {
+  background-color: #000;
+  border: 1px solid #0f0;
+  height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.welcome-message h2,
+.welcome-message p,
+.owner-info {
+  color: #0f0;
+}
+
+.owner-info code {
+  background: #111;
+  color: #0f0;
+  padding: 2px 4px;
+  border: 1px solid #0f0;
+}
+
+/* input sections */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  background: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 8px;
+  flex: 1;
+}
+
+input::placeholder {
+  color: #0f05;
+}
+
+button {
+  background: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #0f0;
+  color: #000;
+}
+
+/* footer */
+.chat-footer {
+  margin-top: 20px;
+  border-top: 1px solid #0f0;
+  padding-top: 10px;
+  font-size: 0.9rem;
+}
+
+#boot-screen {
+  position: fixed;
+  z-index: 9999;
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#boot-lines {
+  white-space: pre-wrap;
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 20px;
+  max-width: 90%;
+  text-shadow: 0 0 2px #0f0;
+  animation: fadeOut 0.5s ease-in forwards;
+  animation-delay: 4s;
+  opacity: 1;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
